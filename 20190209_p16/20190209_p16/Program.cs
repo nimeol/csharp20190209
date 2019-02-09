@@ -20,7 +20,9 @@ namespace _20190209_p16
         static void Main(string[] args)
         {
             Emp e = new Emp();
+            Console.WriteLine(e.name);
             e.name = "홍";
+            Console.WriteLine(e.name);
 
         }
     }
