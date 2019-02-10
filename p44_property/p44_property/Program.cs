@@ -20,10 +20,10 @@ namespace p44_property
         }
         public int Area
         {
-            get { return width * height / 2; }
+            get { return width * height / 2; }//읽기전용 set생략
         }
     }
-    class Triangle2
+    class Triangle2//단순한 설정 또는 단순한 반환은 명시를 하지않아도 된다.
     {
         public int Width
         {
