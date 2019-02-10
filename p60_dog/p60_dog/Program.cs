@@ -5,7 +5,7 @@ namespace p60_dog
     public abstract class Dog //:Object 생략, 추상 클래스, 틀 정의
     {
         public string name { get; set; }
-        public abstract void jitda();
+        public abstract void jitda(); //추상클래스 new X, 선언안해도 virtual
         /*
         public virtual void jitda() //부모 재정의
         {
