@@ -4,6 +4,8 @@ namespace p60_dog
 {
     public abstract class Dog //:Object 생략, 추상 클래스, 틀 정의
     {
+        public Dog() { } //기본생성자, 자동생성, 생략가능
+
         public string name { get; set; }
         public abstract void jitda(); //추상클래스 new X, 선언안해도 virtual
         /*
@@ -14,6 +16,7 @@ namespace p60_dog
     }
     public class Pudle : Dog
     {
+        
         public override void jitda()//method 재정의
         {
             Console.WriteLine(name + "푸들푸들~");
