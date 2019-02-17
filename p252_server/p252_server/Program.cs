@@ -24,6 +24,7 @@ class Server
             while (true)
             {
                 Socket socket = listener.AcceptSocket();
+                Console.WriteLine(">>>>" + socket.ToString());
                 new Thread(() => chat(socket)).Start();
             }
         }
@@ -38,10 +39,10 @@ class Server
         Encoding encoding = Encoding.GetEncoding("euc-kr");
         try
         {
-            clientSockets.Add(socket);
+            clientSockets.Add(socket);//array list 저장
             StreamReader reader = new StreamReader(new NetworkStream(socket), encoding);
             string line;
-            while ((line = readLine(reader)) != null)
+            while ((line = readLine(reader)) != null)//네트워크 점검
             {
                 Console.WriteLine(line);
                 // ArrayList에 보관된 모든 클라이언트 처리 소켓만큼
