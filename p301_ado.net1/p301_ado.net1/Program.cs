@@ -12,14 +12,14 @@ namespace p301_ado.net1
     {
         static void Main(string[] args)
         {
-            string str = "Data source = topcredu;user id = scott; password = tiger";
-            /*string str = @"Data Source=(DESCRIPTION =
+            //string str = "Data source = topcredu;user id = scott; password = tiger";
+            string str = @"Data Source=(DESCRIPTION =
  (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.0.27)(PORT = 1521))
  (CONNECT_DATA =
  (SERVER = DEDICATED)
 (SERVICE_NAME = topcredu)
  )
- ) ;User Id=scott;Password=tiger";*/
+ ) ;User Id=scott;Password=tiger";
             OracleConnection Conn = new OracleConnection(str);
             OracleCommand Comm;
             Comm = new OracleCommand();
